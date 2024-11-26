@@ -7,10 +7,9 @@ class TestChuckNorrisJokes:
         self.list_joke_categories = self.get_list_joke_categories()
 
     # получение всех категорий
-    @staticmethod
-    def get_list_joke_categories():
+    def get_list_joke_categories(self):
         path_to_categories = "/categories"
-        full_path_to_categories = base_url + path_to_categories
+        full_path_to_categories = self.base_url + path_to_categories
         return requests.get(full_path_to_categories).json()
 
     # получить шутку из категории
